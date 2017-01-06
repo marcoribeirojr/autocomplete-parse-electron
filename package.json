@@ -1,0 +1,48 @@
+{
+  "name": "autocomplete-parse-electron",
+  "version": "1.0.0",
+  "description": "A autocomplete using Parse and running on Electron.",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest --coverage --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoribeirojr/autocomplete-parse-electron.git"
+  },
+  "keywords": [
+    "Autocomplete",
+    "Parse",
+    "Electron",
+    "Javascript"
+  ],
+  "author": "Marco Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcoribeirojr/autocomplete-parse-electron/issues"
+  },
+  "homepage": "https://github.com/marcoribeirojr/autocomplete-parse-electron#readme",
+  "devDependencies": {
+    "babel-jest": "^18.0.0",
+    "jest-cli": "^18.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**",
+      "!**/coverage/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "dependencies": {
+    "parse": "^1.9.2"
+  }
+}
