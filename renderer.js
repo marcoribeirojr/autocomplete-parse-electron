@@ -2,10 +2,10 @@
 ;( () => {
   'use strict'
 
-  const appId = "SU0myMIe1AUitLKar0mum8My8RbQ87lEaRjjKDgh";
-  const jsKey = "GtvnNXChRLZRYBbWxNy9fM0LPloMfpYICCtMdJIL";
-  const url = "https://parseapi.back4app.com/";
-  const model = "Professores";
+  const appId = "YOUR APP ID";
+  const jsKey = "YOUR JS KEY";
+  const url = "URL";
+  const model = "MODEL";
 
   require('angular');
   const newServer = require('./local_modules/server');
