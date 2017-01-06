@@ -4,7 +4,8 @@
   "description": "A autocomplete using Parse and running on Electron.",
   "main": "main.js",
   "scripts": {
-    "test": "jest --coverage --watch"
+    "test": "jest --coverage",
+    "watch:test" : "jest --coverage --watch"
   },
   "repository": {
     "type": "git",
