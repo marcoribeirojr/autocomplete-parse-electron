@@ -4,7 +4,8 @@ const query = (model, parseObject) => {
   if(model === undefined || typeof model !== 'string' || parseObject === undefined || typeof parseObject !== 'object'){
     return;
   }
-  const newQuery = new parseObject.Query();
+  const Model = parseObject.Object.extend(model);
+  const newQuery = new parseObject.Query(Model);  
   return newQuery;
 }
 
