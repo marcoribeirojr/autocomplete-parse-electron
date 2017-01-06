@@ -7,9 +7,9 @@
   </head>
   <body>
     <div ng-app = "autocompleteApp" ng-controller="MainCtrl" class="container">
-      <input type="search" autocomplete="off" ng-model="search">
+      <input type="search" autocomplete="off" ng-model="search" ng-keydown="getData()">
       <div>
-        <listNames class="names" ng-repeat="option in options | filter: search as results" ng-click="select($index)" ng-if="search.length > 0">{{option.name}}</listNames>
+        <listNames class="names" ng-repeat="option in options | filter: search as results" ng-click="select($index)" ng-if="search.length > 0">{{option.nome}}</listNames>
       </div>
 
       <div class="">
