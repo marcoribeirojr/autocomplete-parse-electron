@@ -1,3 +1,25 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
+
+;( () => {
+  'use strict'
+  require('angular');
+
+  angular
+  .module('autocompleteApp', [])
+  .controller('MainCtrl', MainCtrl);
+  MainCtrl.$inject = ['$http', '$scope'];
+
+  function MainCtrl($http, $scope) {
+
+    $scope.options = [
+      {name: 'Fulano'},
+      {name: 'Cicrano'},
+    ];
+
+    $scope.select = index => {
+      $scope.teacher = $scope.options[index];
+      $scope.search = "";
+      $scope.options = [];
+    }
+  }
+  
+})();

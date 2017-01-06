@@ -47,6 +47,7 @@
     }
   },
   "dependencies": {
+    "angular": "^1.6.1",
     "parse": "^1.9.2"
   }
 }

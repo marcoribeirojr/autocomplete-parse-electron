@@ -3,12 +3,21 @@
   <head>
     <meta charset="UTF-8">
     <title>Autocomplete</title>
+    <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
-    <h1>Hello World</h1>
+    <div ng-app = "autocompleteApp" ng-controller="MainCtrl" class="container">
+      <input type="search" autocomplete="off" ng-model="search">
+      <div>
+        <listNames class="names" ng-repeat="option in options | filter: search as results" ng-click="select($index)" ng-if="search.length > 0">{{option.name}}</listNames>
+      </div>
+
+      <div class="">
+        {{teacher | json}}
+      </div>
+    </div>
   </body>
   <script>
-    // You can also require other files to run in this process
     require('./renderer.js')
   </script>
 </html>
