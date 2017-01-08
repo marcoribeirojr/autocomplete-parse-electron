@@ -3,19 +3,35 @@
   <head>
     <meta charset="UTF-8">
     <title>Autocomplete</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <div ng-app = "autocompleteApp" ng-controller="MainCtrl" class="container">
-      <input type="search" autocomplete="off" ng-model="search" ng-keydown="getData()">
-      <div>
-        <listNames class="names" ng-repeat="option in options | filter: search as results" ng-click="select($index)" ng-if="search.length > 0">{{option.nome}}</listNames>
+    <div ng-app = "autocompleteApp" ng-controller="MainCtrl as ct">
+
+      <div class="searcher">
+        <label for="">Informe o termo da busca:</label>
+        <input type="search" autocomplete="off" ng-model="search" ng-keydown="getData()" class="teacher-search" placeholder="Search...">
+        <div class="list">
+          <listNames class="names" ng-repeat="option in options | filter: search as results" ng-click="select($index)" ng-if="search.length > 0">{{option.nome}}</listNames>
+        </div>
       </div>
 
-      <div class="">
-        {{teacher | json}}
+      <div class="teacher" ng-show="selectedTeacher">
+        <div class="item image">
+          <img class="photo" ng-src="{{teacher.imagem}}" alt="" />
+        </div>
+        <div class="item description">
+          <div class="name">{{teacher.nome}}</div>
+          <div>{{teacher.materia}}</div>
+          <div data-rating="rating"></div>
+        </div>
+        <div class="item curriculo">
+          <p>{{teacher.curriculo}}</p>
+        </div>
       </div>
+
     </div>
+
   </body>
   <script>
     require('./renderer.js')

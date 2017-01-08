@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "angular": "^1.6.1",
+    "code42day-rating": "^1.0.1",
     "parse": "^1.9.2"
   }
 }
