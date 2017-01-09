@@ -36,7 +36,8 @@
   "jest": {
     "testEnvironment": "node",
     "collectCoverageFrom": [
-      "**/*.js",
+      "**/__tests__/*.js",
+      "!**/*.js",
       "!**/node_modules/**",
       "!**/coverage/**"
     ],
